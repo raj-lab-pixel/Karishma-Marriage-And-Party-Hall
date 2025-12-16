@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: rgba(165, 42, 42, 0.95);
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(255,255,255,0.65);
+  padding: 30px;
+  border-radius: 10px;
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #a52a2a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 40px 25px;
+  margin: 30px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+}
+
+.section.light {
+  background: rgba(255,255,255,0.95);
+}
+
+/* SERVICES */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #a52a2a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 15px;
+}
+
+.img-box {
+  height: 130px;
+  background: #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTACT */
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+button {
+  background: #a52a2a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-buttons a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(0,0,0,0.85);
+  color: white;
+  text-align: center;
+  padding: 12px;
+}
+
+/* ---------- SMOOTH TRANSITIONS ---------- */
+* {
+  transition: all 0.3s ease;
+}
+
+/* ---------- NAVBAR SCROLL EFFECT ---------- */
+.navbar.scrolled {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ---------- BUTTON HOVER ---------- */
+.btn:hover,
+button:hover,
+.contact-buttons a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ---------- CARD HOVER ---------- */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ---------- GALLERY HOVER ---------- */
+.img-box:hover {
+  transform: scale(1.08);
+}
+
+/* ---------- FADE-IN ANIMATION ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
